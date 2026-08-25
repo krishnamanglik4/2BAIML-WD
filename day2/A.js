@@ -87,6 +87,18 @@ for(let i = 0 ; i < students.length ; i++){
 
 
 
+const student = {
+    id:101,
+    name:"Utkarsh",
+    course:"B.Tech"
+};
+console.log(student);
+
+
+
+
+
+
 
 
 
