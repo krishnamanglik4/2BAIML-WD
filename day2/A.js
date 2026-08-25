@@ -62,3 +62,34 @@ do{
 
 
 
+let arr = [1,2,3,4,5];
+let sum = 0;
+for(let i = 0 ; i < arr.length; i++){
+    console.log(arr[i]);
+    sum+=arr[i];
+}
+console.log("Sum = " , sum);
+
+
+let students = [
+    ["Utkarsh" , "Male" , "M.Tech"],
+    ["Waseem"  , "Male" , "B.Tech"],
+    ["Parth"   , "Male" , "Factory"]
+]
+console.log(students)
+
+for(let i = 0 ; i < students.length ; i++){
+    for(let j = 0 ; j < students[i].length ; j++){
+        console.log(students[i][j]);
+    }
+    console.log("____________________");
+}
+
+
+
+
+
+
+
+
+
