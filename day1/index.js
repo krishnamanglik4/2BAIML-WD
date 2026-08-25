@@ -32,6 +32,3 @@ for(var i = 0 ; i < arr.length;i++){
 
 console.log(app.xz);
 console.log(app.yy);
-
-
-

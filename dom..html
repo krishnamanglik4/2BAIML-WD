@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            width: 400px;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            width: 100%;
+            height: 42px;
+
+            margin-bottom: 15px;
+
+            padding: 10px;
+
+            border: 2px solid #ccc;
+            border-radius: 5px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            width: 100%;
+            height: 42px;
+
+            margin-top: 5px;
+
+            border: none;
+            border-radius: 5px;
+
+            background-color: #007bff;
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>REGISTRATION FORM</h1>
+
+        <form id="Registration">
+
+            <input
+                type="text"
+                id="uname"
+                placeholder="Enter Name"
+            >
+
+            <input
+                type="text"
+                id="number"
+                placeholder="Enter Number"
+            >
+
+            <input
+                type="email"
+                id="emailid"
+                placeholder="Enter Email ID"
+            >
+
+            <input
+                type="password"
+                id="pass"
+                placeholder="Enter Password"
+            >
+
+            <input
+                type="password"
+                id="repass"
+                placeholder="Enter Password Again"
+            >
+
+            <button type="submit">
+                SUBMIT
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        let form = document.getElementById("Registration");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("uname").value.trim();
+            let number = document.getElementById("number").value.trim();
+            let email = document.getElementById("emailid").value.trim();
+            let password = document.getElementById("pass").value;
+            let repassword = document.getElementById("repass").value;
+
+
+            if (name === "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            if (name.length < 3) {
+                alert("Name must contain at least 3 characters");
+                return;
+            }
+
+
+
+            if (number === "") {
+                alert("Please enter your mobile number");
+                return;
+            }
+
+            if (number.length != 10) {
+                  alert("Please enter a 10 digit number");
+                 return;
+            }
+
+
+            
+
+            if (email === "") {
+                alert("Please enter your email");
+                return;
+            }
+
+            if (!email.includes("@")) {
+                alert("Please enter a valid email");
+                return;
+            }
+
+            if (password === "") {
+                alert("Please enter your password");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("Password must contain at least 8 characters");
+                return;
+            }
+
+            if (repassword === "") {
+                alert("Please enter password again");
+                return;
+            }
+
+            if (password !== repassword) {
+                alert("Passwords do not match");
+                return;
+            }
+
+
+           
+
+            alert("Registration Successful!");
+
+            form.reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
