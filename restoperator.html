@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    <script>
+        function sum(...value){
+            let t  = 0 ;
+            for(let n of value){
+                t = t + n;
+            }
+            return t;
+        }
+        console.log(sum(10,20,30,40));
+        
+    </script>
+</body>
+</html>
