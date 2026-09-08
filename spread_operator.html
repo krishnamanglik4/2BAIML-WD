@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+</body>
+<script>
+
+    function sum(...value){
+        let sum = 0 ;
+        for(let i in value){
+            sum = sum + Number(value[i]);
+        }
+        console.log(sum);
+    };
+
+    let arr = [];
+    for(let i = 0 ; i < 5 ; i++){
+        arr[i] = prompt("Enter Elements");
+    }
+    sum(...arr);
+    
+    
+</script>
+</html>

@@ -7,14 +7,20 @@
 </head>
 <body>
     <script>
-        function sum(...value){
+    
+        function sum(fname,lname , ...value){
             let t  = 0 ;
             for(let n of value){
                 t = t + n;
             }
-            return t;
+            console.log(fname);
+            console.log(lname);
+            console.log(t);
         }
-        console.log(sum(10,20,30,40));
+
+        sum("krishna", "Manglik" , 10,20,30,40);
+        
+        
         
     </script>
 </body>
