@@ -13,7 +13,7 @@
     function sum(...value){
         let sum = 0 ;
         for(let i in value){
-            sum = sum + Number(value[i]);
+            sum = sum + parseInt(value[i]);
         }
         console.log(sum);
     };
@@ -23,6 +23,14 @@
         arr[i] = prompt("Enter Elements");
     }
     sum(...arr);
+    
+    var a1 = [10,20,30];
+    var a2 = [40,50];
+    var a3 = [...a1 , ...a2];
+    var a4 = [60,...a1,70,...a2];
+    console.log(a3);
+    console.log(a4);
+    
     
     
 </script>
