@@ -1,4 +1,4 @@
-class Person{
+class Person{ 
     static count = 0;
     constructor(id , name , age){
         this.id = id;
